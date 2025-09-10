@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern To-Do List</title>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-primary flex justify-center items-start pt-10 px-5 font-poppins">
+  <div class="container bg-white/15 backdrop-blur-md rounded-2xl shadow-xl border border-white/30 text-white p-6 w-full max-w-md">
+    <div class="header text-center mb-6">
+      <h1 class="text-3xl font-semibold mb-2">Modern To-Do List</h1>
+      <p class="text-white/80 font-light">Organize your tasks with style</p>
+    </div>
+    
+    <!-- Form for adding todos -->
+    <form id="todo-form" class="flex gap-3 mb-6">
+      <input 
+        id="todo-input" 
+        type="text" 
+        placeholder="What needs to be done?" 
+        class="flex-1 px-5 py-4 border-0 rounded-xl text-lg bg-white/85 text-gray-800 shadow-md transition-all focus:bg-white focus:ring-3 focus:ring-blue-400 outline-none"
+      />
+      <button 
+        type="submit" 
+        class="bg-gradient-button text-white px-5 py-4 border-0 rounded-xl cursor-pointer font-semibold text-lg shadow-lg transition-all hover:translate-y-[-3px] hover:shadow-xl active:translate-y-0"
+      >
+        Add Task
+      </button>
+    </form>
+
+    <!-- Stats section -->
+    <div class="stats bg-white/20 p-4 rounded-xl shadow-md mb-5 flex justify-between">
+      <div class="stat-item text-center">
+        <div class="stat-number text-2xl font-semibold text-green-400" id="total-tasks">0</div>
+        <div class="stat-label text-sm text-white/80">Total Tasks</div>
+      </div>
+    </div>
+
+    <!-- Where todos will be rendered -->
+    <div id="todos" class="max-h-96 overflow-y-auto pr-2"></div>
+
+    <div class="footer text-center mt-6 text-white/70 text-sm">
+      <p>Add, edit, and organize your daily tasks</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
