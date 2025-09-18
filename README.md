@@ -2,7 +2,8 @@
 
 A lightweight, user-friendly To-Do List application designed to help you organize tasks, boost productivity, and stay on top of your day.
 
-
+🌐 Live Demo Preview
+Live Demo Preview: https://coding-with-chuks.github.io/Todo-List/
 
 Features:
 
